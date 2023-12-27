@@ -10,7 +10,7 @@ from mangum import Mangum
 app = _fastapi.FastAPI()
 handler = Mangum(app)
 
-""" origins = ["http://localhost:3000"]
+origins = ["http://localhost:3000"]
 
 app.add_middleware(
     CORSMiddleware,
@@ -19,7 +19,7 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
- """
+
 @app.get("/")
 async def hello():
     return {"message": "Hello World"}
